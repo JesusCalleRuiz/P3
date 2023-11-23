@@ -9,7 +9,7 @@ endpoints:
 # /hipoteca (POST)
   crear hipoteca
   
-# /client/:id" (DELETE)
+# /client/:id (DELETE)
   eliminar cliente a partir de su id
   
 # /client/:idClient1/:idClient2/:dinero (PUT)
@@ -21,5 +21,5 @@ endpoints:
 # /gestor/:gestorId/:clienteId (PUT)
   asignar un gestor a un cliente 
 
-# /hipoteca/:clienteId/:hipotecaId
+# /hipoteca/:clienteId/:hipotecaId (PUT)
   amoritzar una cuota de la hipoteca de un cliente

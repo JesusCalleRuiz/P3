@@ -8,6 +8,7 @@ import addMoney from "./resolvers/addMoney.ts";
 import addHipoteca from "./resolvers/addHipoteca.ts";
 import addGestor from "./resolvers/addGestor.ts";
 import gestorToClient from "./resolvers/gestorToClient.ts";
+import amortizarHipoteca from "./resolvers/amortizarHipoteca.ts";
 
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
 const env = await load();
@@ -29,6 +30,7 @@ app
   .put("/client/:idClient1/:idClient2/:dinero",sendMoney)
   .put("/client/:id/:dinero",addMoney)
   .put("/gestor/:gestorId/:clienteId",gestorToClient)
+  .put("/hipoteca/:clienteId/:hipotecaId",amortizarHipoteca)
  
 
 app.listen(3000, () => {
